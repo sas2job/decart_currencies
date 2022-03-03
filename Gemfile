@@ -39,6 +39,9 @@ gem 'bootsnap', require: false
 # An XML toolkit for Ruby
 gem 'rexml'
 
+# Blueprinter is a JSON Object Presenter for Ruby
+gem 'blueprinter'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
