@@ -1,6 +1,9 @@
 module Api
   module V1
     class CurrenciesController < ApplicationController
+
+      before_action :set_currency, only: %i[show]
+
       # CET /currencies
       def index
         @currencies = Currency.page(page).per(per_page)
@@ -8,7 +11,18 @@ module Api
         set_pagination_headers(@currencies)
       end
 
+      def show
+        render json: CurrencySerializer.render_as_hash(@currency, view: :extended)
+      end
+
       private
+
+      def set_currency
+        @currency = Currency.find_by(id: params[:id])
+        if @currency.blank?
+          render json: { error: 'Unable to found a currency.' }, status: 404
+        end
+      end
 
       def page
         page ||= params[:page] || 1
