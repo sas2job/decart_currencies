@@ -6,8 +6,6 @@ module Api
       # CET /currencies
       def index
         @currencies = Currency.page(page).per(per_page)
-        render json: CurrencySerializer.render_as_hash(@currencies, view: :normal)
-        set_pagination_headers(@currencies)
       end
 
       def show

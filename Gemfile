@@ -13,7 +13,7 @@ gem 'pg'
 gem 'puma', '~> 5.0'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem "jbuilder"
+gem 'jbuilder'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -38,9 +38,6 @@ gem 'bootsnap', require: false
 
 # An XML toolkit for Ruby
 gem 'rexml'
-
-# Blueprinter is a JSON Object Presenter for Ruby
-gem 'blueprinter'
 
 # Kaminari is a paginator for Rails 3+
 gem 'kaminari'
