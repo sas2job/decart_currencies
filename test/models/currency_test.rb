@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class CurrencyTest < ActiveSupport::TestCase
   test 'valid currency' do
